@@ -20,11 +20,19 @@
             user-select: none;
             
         }
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 100;
+            }
+        }
 
     </style>
 </head>
 <body class="bg-gray-950 font-[poppins]">
-    <main class="h-fit w-screen overflow-hidden">
+    <main class="h-fit w-screen overflow-hidden ">
         <div class="header  h-[4rem] w-screen  flex justify-end text-white">
             <div class="headerPart h-full w-[30rem] flex items-center justify-evenly hidden sm:flex text-[0.9rem]">
                 <div class="text cursor-pointer opacity-75 hover:opacity-100">Home</div>
@@ -32,12 +40,18 @@
                 <div class="text cursor-pointer opacity-75 hover:opacity-100">Projects</div>
                 <div class="text cursor-pointer opacity-75 hover:opacity-100">Contacts</div>
             </div>
-                <i class="h-full w-[3rem] flex justify-center items-center ri-menu-3-line sm:hidden  text-[1.6rem] font-bold place-self-center "></i>
+            <div class="sideBar hidden flex-col h-fit w-[20rem] max-w-screen border-l border-t fixed top-[3rem] bg-black z-100">
+                <div class="text h-[4rem] w-full flex items-center pl-[0.5rem] border-b cursor-pointer opacity-75 hover:opacity-100">Home</div>
+                <div class="text h-[4rem] w-full flex items-center pl-[0.5rem] border-b cursor-pointer opacity-75 hover:opacity-100">About</div>
+                <div class="text h-[4rem] w-full flex items-center pl-[0.5rem] border-b cursor-pointer opacity-75 hover:opacity-100">Projects</div>
+                <div class="text h-[4rem] w-full flex items-center pl-[0.5rem] border-b   cursor-pointer opacity-75 hover:opacity-100">Contacts</div>
+            </div>
+                <i class="menu  h-full w-[3rem] flex justify-center items-center ri-menu-3-line sm:hidden  text-[1.6rem] font-bold place-self-center "></i>
         </div>
         <div class="firstPage sm:h-[31.5rem]   h-fit w-screen  flex flex-col  sm:flex-row ">
             <div class="firstPagePart1 h-[31.5rem]  w-[100%] sm:w-[50%]    flex flex-col  justify-evenly items-center md:items-start">
-                <div class="greet tracking-tight text-[200%] h-[50%] w-[80%]  sm:ml-[4.5rem]  flex flex-col justify-center items-center sm:items-start text-white lg:text-[3rem] font-bold text-center ">
-                    <p>Hello🙋‍♂️</p>
+                <div class="greet  tracking-tight text-[200%] h-[50%] w-[80%]  sm:ml-[4.5rem]  flex flex-col justify-center items-center sm:items-start text-white lg:text-[3rem] font-bold text-center ">
+                    <p>Hello <span class="animate-pulse duration-1000 delay-500 ">🙋‍♂️</span></p>
                     <div class="font-normal opacity-75 text-center flex ">
                         I'm <pre> </pre> <p class="text-orange-600 font-normal " >Hariom Modi</p>
                     </div>
@@ -120,8 +134,8 @@
                 
             </div>
             <div class="projectPagePart2  h-[31.5rem]  w-[100%] sm:w-[50%]    flex flex-col justify-center items-center    text-white ">
-                <img class="h-[10rem] w-[10rem] rounded-lg" src="icon.png" alt="">
-                <a href="MaxBattle.apk" download="Max battle"  class="download h-[3rem] w-[10rem] bg-orange-600 flex justify-center items-center m-[1rem]">Download</a>
+                <img class="h-[6rem] w-[6rem] rounded-lg" src="icon.png" alt="">
+                <a href="MaxBattle.apk" download="Max battle"  class="download h-[3rem] w-[10rem] bg-orange-600 flex justify-center items-center m-[3rem]">Download</a>
                 <div class="techStack pl-[0.5rem]" >
                     <p class="h-[3rem] flex items-center text-[1.3rem]">Tech stack :</p>
                     Ejs(html + js) + Css + Express + Mongodb + Razorpay
@@ -129,5 +143,6 @@
             </div>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
